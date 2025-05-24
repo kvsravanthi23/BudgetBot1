@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-gray-900 bg-[#F5F7FA] relative;
+  }
+  button {
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-md;
+  }
+  input {
+    @apply px-4 py-2 bg-[#1B1F3B] text-white rounded-xl placeholder-gray-300;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply self-start px-4 py-2 text-sm rounded-xl bg-[#1B1F3B] text-white transition-all shadow-md hover:bg-[#4A90E2];
+  }
+  .btn-primary {
+    @apply border bg-[#4A90E2] border-[#4A90E2] text-white hover:bg-[#3A7EC1];
+  }
+  .btn-primary-outline {
+    @apply border border-[#A1A5B7] text-[#1B1F3B] hover:bg-[#A1A5B7] hover:text-white;
+  }
+  .btn-danger {
+    @apply text-white bg-red-500 border-red-500 hover:bg-red-400;
+  }
+  .input-group {
+    @apply flex flex-col gap-4;
+  }
+
+  /* Swiper Custom Styles */
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-blue-500 w-10 h-10 bg-white bg-opacity-80 rounded-full flex items-center justify-center transition-all;
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    @apply bg-opacity-100;
+  }
+  .swiper-button-prev::after {
+    content: '←'; /* Custom left arrow */
+    @apply text-2xl;
+  }
+  .swiper-button-next::after {
+    content: '→'; /* Custom right arrow */
+    @apply text-2xl;
+  }
+  .swiper-pagination-bullet {
+    @apply bg-blue-500 opacity-50 w-2 h-2;
+  }
+  .swiper-pagination-bullet-active {
+    @apply opacity-100;
+  }
+  /* Ensure charts fit within slides */
+  .chart-container {
+    @apply w-full max-w-xs h-64 mx-auto;
+  }
+}
