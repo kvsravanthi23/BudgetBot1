@@ -133,15 +133,15 @@ export default function FinancialChatbot() {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && handleChat()}
               />
-              <button
-                onClick={handleStartListening}
-                className={`p-2 rounded-full text-white ${
-                  listening ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
-                }`}
-                aria-label={listening ? "Stop Listening" : "Start Listening"}
-              >
-                <FaMicrophone />
-              </button>
+              // <button
+              //   onClick={handleStartListening}
+              //   className={`p-2 rounded-full text-white ${
+              //     listening ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
+              //   }`}
+              //   aria-label={listening ? "Stop Listening" : "Start Listening"}
+              // >
+              //   // <FaMicrophone />
+              // </button>
             </div>
             <button
               className="w-full btn btn-primary disabled:bg-gray-500"
